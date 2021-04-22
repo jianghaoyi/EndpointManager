@@ -1,0 +1,23 @@
+{
+  "name": "client",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc --project tsconfig.json",
+    "start": "tsc --project tsconfig.json && node build/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.2.4"
+  },
+  "dependencies": {
+    "@types/lodash": "^4.14.168",
+    "@types/node": "^14.14.41",
+    "lodash": "^4.17.21",
+    "parse-url": "^5.0.2",
+    "require-json5": "^1.1.0"
+  }
+}

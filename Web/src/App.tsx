@@ -91,22 +91,7 @@ export default class UserTable extends React.Component<any,any> {
           modal:false
       })
   }
-  changeState(key:any) {
-    let line = this.state.changeLine;
- 
-    if (line[key]) {//保存修改
-      line[key] = false;
-      this.setState({
-        result: this.state.temp
-      })
-    } else {
-      line[key] = true;
-    }
-    this.setState({
-      changeLine: line
-    })
- 
-  }
+  
   modify(index:any, type:any, value:any) {
     console.log(index, type, value);
       let _temp = JSON.parse(JSON.stringify(this.state.temp));          

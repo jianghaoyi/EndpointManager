@@ -35,22 +35,22 @@ export default class UserTable extends React.Component<any,any> {
     const data = [{
         key: '0',
         name: 'John Brown',
-        http: 'http',
-        site: 'New York No. 1 Lake Park',
+        protocol: 'http',
+        domin: 'New York No. 1 Lake Park',
         port: '8000',
       },
       {
         key: '1',
         name: 'Jim Green',
-        http: 'https',
-        site: 'London No. 1 Lake Park',
+        protocol: 'https',
+        domin: 'London No. 1 Lake Park',
         port: '8080',
       },
       {
         key: '2',
         name: 'Joe Black',
-        http: 'http',
-        site: 'Sidney No. 1 Lake Park',
+        protocol: 'http',
+        domin: 'Sidney No. 1 Lake Park',
         port: '3322',
       }];
  
@@ -124,29 +124,29 @@ export default class UserTable extends React.Component<any,any> {
       key: 'name', 
     },
     {
-      title: 'Http',
-      dataIndex: 'http',
-      key: 'http',
+      title: 'Protocol',
+      dataIndex: 'protocol',
+      key: 'protocol',
       render: (text:any,line:any) => {
-        return (<Select defaultValue={text} onChange={(value:any)=>{this.modify(line.key,'http',value)}}>
+        return (<Select defaultValue={text} onChange={(value:any)=>{this.modify(line.key,'protocol',value)}}>
                     <Option value="http">http</Option>
                     <Option value="https">https</Option>
                 </Select>)     
        }
     }, 
     {
-        title: 'Site',
-        dataIndex: 'site',
-        key: 'site',
+        title: 'Domin',
+        dataIndex: 'domin',
+        key: 'domin',
         render: (text:any,line:any) => {
-            return (<Input type='text' defaultValue={text} onBlur={(e:any)=>{let v = e.target.value;this.modify(line.key,'site',v)}}/>)
+            return (<Input type='text' defaultValue={text} onBlur={(e:any)=>{this.modify(line.key,'domin',e.target.value)}}/>)
         }},
     {
         title: 'Port',
         dataIndex: 'port',
         key: 'port',
         render: (text:any,line:any) => {
-            return (<Input type='number' defaultValue={text} onBlur={(e:any)=>{let v = e.target.value;this.modify(line.key,'port',v)}}/>)
+            return (<Input type='number' defaultValue={text} onBlur={(e:any)=>{this.modify(line.key,'port',e.target.value)}}/>)
     }}];
     return (
       <div>

@@ -1,11 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
+import 'antd/dist/antd.css';
 import App from './App';
 
-const title = 'My React Webpack  Setup';
 
 ReactDOM.render(
-  <App title={title} />,
+  <App/>,
   document.getElementById('app')
 );
